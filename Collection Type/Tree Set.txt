@@ -1,0 +1,43 @@
+package implementasi;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.TreeSet;
+import java.util.LinkedHashSet;
+
+/**
+*
+* @author MOH PRAYOGI
+*/
+
+public class Set {
+
+ public static void main(String[] args) {
+ TreeSet<String> tSet = new TreeSet<>();
+ tSet.add("GADO-GADO");
+ tSet.add("GADO-GADO");
+ tSet.add("MIE AYAM");
+ tSet.add("NASI KUNING");
+ tSet.add("MARTABAK MANIS");
+ tSet.add("BAKSO URAT");
+ tSet.add("PINDANG PATIN");
+ tSet.add("RAGIT");
+ System.out.println("Kuliner \t\t\t : " + tSet);
+ System.out.println("Kuliner Gado-Gado Ada? \t\t : " + tSet.contains("GADO-GADO"));
+ System.out.println("Kuliner empty? \t\t\t : " + tSet.isEmpty());
+ System.out.println("Total Kuliner \t\t\t : " + tSet.size());
+ 
+ System.out.println("Show Kuliner vertically \t :");
+ Iterator<String> i = tSet.iterator();
+ i = tSet.iterator();
+ while (i.hasNext())
+ System.out.println("Makanan --> " + i.next());
+ tSet.remove("MIE AYAM");
+ 
+ System.out.println("Kuliner \"MIE AYAM\" deleted\t : " + tSet);
+ tSet.clear();
+ System.out.println("The clear TreeSet \t\t : " + tSet);
+
+ } //main
+
+} //class

@@ -1,0 +1,38 @@
+package implementasi;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.TreeSet;
+import java.util.LinkedHashSet;
+
+/**
+*
+* @author MOH PRAYOGI
+*/
+
+public class Set {
+
+public static void main(String[] args) {
+
+ LinkedHashSet<String> linkedset = new LinkedHashSet<>();
+ linkedset.add("NASI KEBULI");
+ linkedset.add("PECEL LELE");
+ linkedset.add("GUDEG");
+ linkedset.add("UDANG BAKAR");
+
+ System.out.println("Size of LinkedHashSet=" + linkedset.size());
+ System.out.println("Original LinkedHashSet:" + linkedset);
+ System.out.println("Removing NASI KEBULI from LinkedHashSet: " + linkedset.remove("NASI KEBULI"));
+ System.out.println("Trying to Remove Ikan Bandeng asap which is not present:" + linkedset.remove("IKAN BANDENG ASAP"));
+ System.out.println("Checking if PECEL LELE is present = " + linkedset.contains("PECEL LELE"));
+ 
+ System.out.println("Updated LinkedHashSet: " + linkedset);
+ System.out.println("Display LinkedHashSet Vertically: ");
+
+ linkedset.stream().forEach((strLHS) -> {
+ System.out.println(strLHS);
+ });
+
+ } //main
+
+} //class

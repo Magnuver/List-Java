@@ -1,0 +1,49 @@
+package implementasi;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.TreeMap;
+
+/**
+*
+* @author MOH PRAYOGI
+*/
+
+public class Map {
+
+ public static void main(String[] args) {
+ TreeMap<Integer, String> cul = new TreeMap<>();
+
+ //menambahkan data ke treemap
+ cul.put(101, "Gado-Gado");
+ cul.put(102, "Sate Iwak");
+ cul.put(103, "Ragit");
+ cul.put(104, "Daging Balado");
+
+ //menampilkan treemap
+ System.out.println("Treemap \t\t\t : " + cul.entrySet());
+
+ //iterator treemap dari keys mapping
+ System.out.println("Show Culinary vertically \t :");
+ Iterator<Integer> iterator = cul.keySet().iterator();
+ while (iterator.hasNext()) {
+ int code = iterator.next();
+ System.out.println("TreeMap Culinary \t\t : "+ code + " <=> " + cul.get(code));
+ }
+ System.out.println("Ukuran TreeMap \t\t\t : " + cul.size());
+
+ //mengecek data di treemap
+ System.out.println("Ada Sate Iwak? \t\t\t : " + cul.containsKey(102));
+
+ //men-delete data di treemap
+ System.out.println("Removed \t\t\t : " + cul.remove(104));
+ System.out.println("TreeMap \t\t\t : " + cul.entrySet());
+ System.out.println("Ukuran TreeMap \t\t\t : " + cul.size());
+
+ //menghapus semua data
+ cul.clear();
+ System.out.println("Seluruh items TreeMap dihapus \t : " + cul);
+
+ }//main
+ 
+}//class
